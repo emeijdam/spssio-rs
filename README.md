@@ -1,10 +1,10 @@
-# SPSSIO_RS
+# SPSSIO-RS
 
 Ergonomic Rust bindings for the SPSSIO C Module, generated using the excelent rust bindgen.
 
 Inspired by the duckdb-rs crate.
 
-IBM SPSS Statistics 29 Module
+[IBM SPSS Statistics 29 IO Module](https://community.ibm.com/community/user/ai-datascience/viewdocument/extensions-tools-and-utilities-for?CommunityKey=886b6874-0fb1-402c-8243-c70ef8179a99&tab=librarydocuments)
 
 # Status
 This is a work in progress, but the basic functionality for writing and reading SPSS files is working.
