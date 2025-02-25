@@ -2,7 +2,7 @@
 
 Ergonomic Rust bindings for the SPSSIO C Module, generated using the excelent rust [bindgen](https://github.com/rust-lang/rust-bindgen).
 
-Inspired by the duckdb-rs crate.
+Inspired by the [duckdb-rs](https://github.com/duckdb/duckdb-rs) bindings.
 
 [IBM SPSS Statistics 29 IO Module](https://community.ibm.com/community/user/ai-datascience/viewdocument/extensions-tools-and-utilities-for?CommunityKey=886b6874-0fb1-402c-8243-c70ef8179a99&tab=librarydocuments)
 
