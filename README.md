@@ -1,6 +1,6 @@
 # SPSSIO-RS
 
-Ergonomic Rust bindings for the SPSSIO C Module, generated using the excelent rust bindgen.
+Ergonomic Rust bindings for the SPSSIO C Module, generated using the excelent rust [bindgen](https://github.com/rust-lang/rust-bindgen).
 
 Inspired by the duckdb-rs crate.
 
