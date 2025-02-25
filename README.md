@@ -6,12 +6,37 @@ Inspired by the duckdb-rs crate.
 
 [IBM SPSS Statistics 29 IO Module](https://community.ibm.com/community/user/ai-datascience/viewdocument/extensions-tools-and-utilities-for?CommunityKey=886b6874-0fb1-402c-8243-c70ef8179a99&tab=librarydocuments)
 
+## Usage
+
+```rust
+use std::error::Error;
+use spssio::SPSSFile;
+
+fn main()-> Result<(), Box<dyn Error>>{
+    let myfile = SPSSFile::open_write("output.sav")?;
+
+    myfile.set_var_name("var1", 0)?;
+    myfile.set_var_label("var1", "Variable 1")?;
+
+    myfile.commit_header()?;
+
+    myfile.set_value_numeric("var1", 123.45)?;
+    myfile.commit_case_record()?;
+    
+    myfile.set_value_numeric("var1", 678.90)?;
+    myfile.commit_case_record()?;
+
+    myfile.close_write()?;
+
+}
+```
+
+More examples can be found in the examples folder.
+
 # Status
-This is a work in progress, but the basic functionality for writing and reading SPSS files is working.
+This is a work in progress, but the basic functionality for writing and reading SPSS files is working for OSX Rosetta and Windows.
 
-Need something?> Open an issue or just contact me somehow on linkedin.
-
-Ed Meijdam
+Need something? Open an issue or just contact me somehow on linkedin.
 
 ## Why Rust?
 GenAi: Modern data science and machine learning applications require a high-performance, safe, and reliable programming language. Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. Rust is a great choice for building high-performance applications that require low-level control over system resources. 
@@ -37,18 +62,7 @@ Deploy SPSS data processing services in your applications, such as data APIs, da
 Scale SPSS data processing applications in your applications, such as data processing, data analytics, data science, etc.§
 
 
-## Usage
 
-```rust
-use spssio_rs::SpssIO;
-
-fn main() {
-    let spss_io = SpssIO::new();
-    let file = spss_io.open("data.sav");
-    let data = file.read();
-    println!("{:?}", data);
-}
-```
 
 ## Installation    
 
@@ -63,7 +77,7 @@ spssio_rs = "0.1.0"
 
 
 
-## Building for OSX.
+## Building on and for OSX.
 As far I know, IBM is working on a IBM SPSS v30 version for Apple Silicon, meanwhile we compile for Rosetta.
 
 
