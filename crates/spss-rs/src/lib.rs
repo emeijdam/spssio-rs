@@ -193,7 +193,7 @@ impl SPSSFile {
         if result != 0 {
             return Err(Box::new(std::io::Error::from_raw_os_error(result)));
         }
-        Ok(case_count)
+        Ok(case_count.into())
     }
 
     pub fn get_id_string(&self) -> Result<String, Box<dyn Error>> {
