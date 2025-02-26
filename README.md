@@ -74,7 +74,7 @@ spssio_rs = "0.1.0"
 ```                         
 
 ## License 
-
+SPSSIO-RS are available under the MIT license. See the LICENSE file for more info.
 
 
 ## Building on and for OSX.
