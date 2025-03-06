@@ -2,8 +2,13 @@ use std::error::Error;
 use spssio::SPSSFile;
 
 
-fn main() {
-    let _ = mynewfile();
+fn main()->  Result<(), Box<dyn Error>>  {
+    let result = mynewfile();
+    match result {
+        Ok(_) => println!("File created successfully"),
+        Err(e) => println!("Error: {}", e),
+    }
+    Ok(())
 }
 
 fn mynewfile() -> Result<(), Box<dyn Error>> {
