@@ -4,6 +4,7 @@ Ergonomic Rust bindings for the SPSSIO C Module, generated using the excelent ru
 
 Inspired by the [duckdb-rs](https://github.com/duckdb/duckdb-rs) bindings.
 
+IBM provides a C API for SPSS Statistics, which is used by the SPSSIO C module. This project provides a Rust wrapper around that API, allowing you to read and write SPSS files in Rust.
 [IBM SPSS Statistics 29 IO Module](https://community.ibm.com/community/user/ai-datascience/viewdocument/extensions-tools-and-utilities-for?CommunityKey=886b6874-0fb1-402c-8243-c70ef8179a99&tab=librarydocuments)
 
 ## Usage
