@@ -38,12 +38,6 @@ This is a work in progress, but the basic functionality for writing and reading 
 
 Need something? Open an issue or just contact me somehow on linkedin.
 
-## Why Rust?
-GenAi: Modern data science and machine learning applications require a high-performance, safe, and reliable programming language. Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. Rust is a great choice for building high-performance applications that require low-level control over system resources. 
-
-Me the dev: Cause I like Rust programming, especially with the great Cargo Toolchain. It makes programming fun again.
-
-
 ## Why SPSSIO? 
 
 
@@ -77,18 +71,6 @@ SPSS-rs opens up possibilities for integrating SPSS data into the Rust ecosystem
 *   **Web Application Integration:** Serve SPSS data through a Rust-based web API.
 
 **Note:** This project is under active development.  The current focus is on providing robust bindings for basic data access and manipulation, enabling the use cases in sections 1 & 2. More advanced features will be added over time.
-```
-
-**Key improvements/considerations for a `README.md`:**
-
-*   **Markdown Formatting:** Uses headings, lists, and bold text to make it easy to read on GitHub.
-*   **Status Indicators:**  Clearly indicates the current level of support for each use case ("Current Status", "Near Future", etc.). This manages expectations.
-*   **Concise Descriptions:** Keeps descriptions brief and focused.
-*   **"Note" at the End:** Reinforces that the project is evolving.
-*   **Link to Libraries:** Consider linking to the Rust crates mentioned (e.g., `ndarray`, `linfa`) so users can easily find them.
-
-
-
 
 
 ## Installation    
@@ -101,12 +83,11 @@ spssio_rs = "0.1.0"
 ```                         
 
 ## License 
-SPSSIO-RS are available under the MIT license. See the LICENSE file for more info.
+SPSSIO-RS is available under the MIT license. See the LICENSE file for more info.
 
 
 ## Building on and for OSX.
-As far I know, IBM is working on SPSS for Apple Silicon, meanwhile we compile for Rosetta.
-
+As far as I know, IBM is working on SPSS Statistics for Apple Silicon, so we're currently compiling for Rosetta.
 
 cargo run --target x86_64-apple-darwin    
 cargo build --target x86_64-apple-darwin   
@@ -115,15 +96,17 @@ cargo build -vv --target x86_64-apple-darwin
 
 
 ## Building for Linux
-https://blog.krzyzanowskim.com/2018/12/05/rpath-what/
+
 install_name_tool -add_rpath @executable_path SPSS-RS
-
-
-https://doc.rust-lang.org/cargo/reference/publishing.html
 
 export RUSTFLAGS="-C link-args=-Wl,-rpath,@executable_path"
 cargo build --target x86_64-apple-darwin
 
 cargo run --example create_sav --target x86_64-apple-darwin
+
+**Note:** 
+https://blog.krzyzanowskim.com/2018/12/05/rpath-what/
+https://doc.rust-lang.org/cargo/reference/publishing.html
+
 
 // set LD_LIBRARY_PATH
